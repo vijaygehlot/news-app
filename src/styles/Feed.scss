@@ -1,0 +1,187 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    //border-radius: 10px;
+    //box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    max-width: 900px;
+    margin: 20px auto;
+
+    &:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    +.card {
+        margin-top: 20px;
+        border-top: 1px solid #ddd;
+        padding-top: 20px;
+    }
+
+    .card-column {
+
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 20px;
+
+        &.card-column-1 {
+            flex: 0 0 40%;
+            display: flex;
+            flex-direction: column;
+            padding: 15px;
+
+
+            .card-header {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                .card-image {
+                    width: 90px;
+                    height: 65px;
+                    border-radius: 10px;
+                    object-fit: cover;
+                    margin-right: 10px;
+                }
+
+                .card-header-text {
+                    display: flex;
+                    flex-direction: column;
+                    flex-grow: 1;
+                    margin-right: 10px;
+
+                    .card-date {
+                        color: #888;
+                        font-size: 0.8em;
+                        margin-bottom: -5px;
+                    }
+
+                    .card-title {
+                        font-size: 1em;
+                        line-height: 1.2rem;
+
+                    }
+                }
+
+                .card-source {
+                    font-size: 0.8em;
+                    color: #666;
+                    align-self: flex-start;
+                }
+            }
+        }
+
+        &.card-column-2 {
+            flex: 0 0 50%;
+
+            .card-body {
+
+                font-size: 0.9rem;
+                color: gray;
+            }
+        }
+
+        &.card-column-3 {
+            flex: 0 0 10%;
+            display: flex;
+            align-items: flex-start;
+
+            .card-author {
+                font-size: 0.8em;
+                color: #222;
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        flex-direction: column;
+
+        .card-column {
+            flex: 0 0 auto;
+            width: 100%;
+            padding: 10px;
+
+            &.card-column-1,
+            &.card-column-2,
+            &.card-column-3 {
+                padding: 10px;
+            }
+
+            .card-header {
+                flex-direction: column;
+                align-items: flex-start;
+
+                .card-image {
+                    margin-right: 0;
+                    margin-bottom: 10px;
+                }
+
+                .card-header-text {
+                    .card-date {
+                        font-size: 0.8em;
+                    }
+
+                    .card-title {
+                        font-size: 1em;
+                    }
+                }
+
+                .card-source {
+                    align-self: flex-end;
+                }
+            }
+
+            .card-body {
+                font-size: 0.9em;
+
+            }
+
+            .card-author {
+                align-self: flex-start;
+            }
+        }
+    }
+}
+
+
+/** Pagination ***/
+
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+
+
+    .pagination-arrow,
+    .pagination-number {
+        padding: 10px 15px;
+        margin: 0 5px;
+        background-color: #ffff;
+        color: #000;
+        border: none;
+        border-radius: 100px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+
+        &:disabled {
+            background-color: #cccccc;
+            cursor: not-allowed;
+        }
+
+        &:hover:not(:disabled) {
+            background-color: #000;
+        }
+
+        &.active {
+            background-color: darkgray;
+        }
+    }
+}
