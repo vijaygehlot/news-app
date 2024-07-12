@@ -53,7 +53,7 @@ export const fetchFeeds = createAsyncThunk('feed/fetchFeeds', async () => {
   }
   const data: Feed[] = await response.json();
 
-  // Extract unique categories and authors from the fetched data
+
   const categories = Array.from(new Set(data.map((item) => item.source)));
   const authors = Array.from(new Set(data.map((item) => item.author)));
 
@@ -94,7 +94,7 @@ const applyFilters = (feeds: Feed[], filters: FeedState['filters']) => {
 
   if (filters.category.length > 0) {
     filtered = filtered.filter(feed => filters.category.includes(feed.source));
-    console.log('filtered',filtered);
+
     
   }
 

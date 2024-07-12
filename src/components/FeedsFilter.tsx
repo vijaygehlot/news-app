@@ -17,12 +17,12 @@ const FeedsFilter: React.FC = () => {
 
     dispatch(setFilter({ filterType, selectedOptions }));
   };
-console.log('filterOptions',filterOptions);
+
 
   return (
     <div className="filters">
 
-      {Object.keys(filterOptions).map((filterType) => (
+      {filterOptions && Object.keys(filterOptions).map((filterType) => (
         <div key={filterType} className="filter">
           <p className='filter-title'>{filterType ==='sortBy'? filterType.replace(/([A-Z])/g, ' $1').trim() : filterType}</p>
           {filterOptions[filterType as keyof typeof filterOptions].map((option) => (
