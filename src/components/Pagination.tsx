@@ -21,7 +21,9 @@ const Pagination: React.FC<PaginationProps> = ({ currentPage, totalPages, onPage
         disabled={currentPage === 1}
         className="pagination-arrow"
       >
-        &lt;
+        
+        <i className="fa-solid fa-angle-left"></i>
+
       </button>
       {pageNumbers.map((number) => (
         <button
@@ -37,7 +39,7 @@ const Pagination: React.FC<PaginationProps> = ({ currentPage, totalPages, onPage
         disabled={currentPage === totalPages}
         className="pagination-arrow"
       >
-        &gt;
+    <i className="fa-solid fa-angle-right"></i>
       </button>
     </div>
   );

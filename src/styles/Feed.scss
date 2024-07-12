@@ -54,14 +54,16 @@
                     margin-right: 10px;
 
                     .card-date {
-                        color: #888;
+                        color: #565D6D;
                         font-size: 0.8em;
                         margin-bottom: -5px;
+                        font-weight: 400;
                     }
 
                     .card-title {
                         font-size: 1em;
                         line-height: 1.2rem;
+                        text-align: left;
 
                     }
                 }
@@ -80,7 +82,7 @@
             .card-body {
 
                 font-size: 0.9rem;
-                color: gray;
+                color: #171A1F;
             }
         }
 
@@ -91,7 +93,7 @@
 
             .card-author {
                 font-size: 0.8em;
-                color: #222;
+                color: #171A1F;
                 font-weight: bold;
             }
         }
@@ -160,8 +162,7 @@
     margin: 20px;
 
 
-    .pagination-arrow,
-    .pagination-number {
+    .pagination-arrow {
         padding: 10px 15px;
         margin: 0 5px;
         background-color: #ffff;
@@ -172,7 +173,35 @@
         transition: background-color 0.3s;
 
         &:disabled {
-            background-color: #cccccc;
+            //background-color: #cccccc;
+            cursor: not-allowed;
+        }
+
+        &:hover:not(:disabled) {
+            background-color: #fff;
+        }
+
+        &.active {
+            background-color: #000;
+            color: #fff;
+        }
+    }
+
+    
+    .pagination-number {
+        padding: 10px 15px;
+        margin: 0 5px;
+        background-color: #ffff;
+        color: #000;
+        border: none;
+        border-radius: 100px;
+        cursor: pointer;
+        font-size: 15px;
+        font-weight: 600;
+        transition: background-color 0.3s;
+
+        &:disabled {
+            //background-color: #cccccc;
             cursor: not-allowed;
         }
 
@@ -181,7 +210,8 @@
         }
 
         &.active {
-            background-color: darkgray;
+            background-color: #000;
+            color: #fff;
         }
     }
 }

@@ -1,0 +1,39 @@
+.filters {
+  margin-bottom: 20px;
+  margin-left: 30px;
+}
+
+.filter {
+  margin-bottom: 10px;
+}
+
+.filter-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  background: #F8F9FA;
+  padding: 10px;
+}
+
+.filter-option {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+
+  input[type='checkbox'] {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+
+    &:checked {
+     
+      accent-color: #481ebe;
+    }
+  }
+
+  label {
+    font-size: 1rem;
+    cursor: pointer;
+  }
+}
