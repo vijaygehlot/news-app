@@ -37,3 +37,10 @@
     cursor: pointer;
   }
 }
+
+@media (max-width: 768px) {
+  .filters {
+
+    margin-left: 5px;
+  }
+}
