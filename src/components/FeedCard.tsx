@@ -21,7 +21,7 @@ const FeedCard: React.FC<FeedCardProps> = ({ feeds }) => {
         <div className="card" key={feed.url}>
           <div className="card-column card-column-1">
             <div className="card-header">
-              <img src='https://www.immune-image.eu/wp-content/uploads/2020/01/publications-immune-image.jpg' alt={feed.title} className="card-image" />
+              <img src={`https://dev-storm-rest-api.pantheonsite.io/${feed.image}`} alt={feed.title} className="card-image" />
               <div className="card-header-text">
                 <p className="card-date">{formatDate(feed.date)}</p>
                 <h2 className="card-title">{feed.title}</h2>
