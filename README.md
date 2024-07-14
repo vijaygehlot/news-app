@@ -1,18 +1,22 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Project Setup:
 
-## Available Scripts
+1. Clone the repository : `git clone https://github.com/vijaygehlot/news-app.git`
+2. cd `news-app`
+3. Run `yarn install` to install the dependencies
+4. Run `yarn start` to start the server
+5. Open `http://localhost:3000` in your browser
 
-In the project directory, you can run:
+## Tech Stack:
 
-### `yarn start`
+- React
+- Redux Toolkit
+- TypeScript
+- SCSS
+- React router
+- Jest
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
 ### `yarn test`
 
