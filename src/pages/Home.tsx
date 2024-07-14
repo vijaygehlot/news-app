@@ -15,6 +15,7 @@ const Home: React.FC = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const feedsPerPage = 5;
 
+
   useEffect(() => {
     dispatch(fetchFeeds());
   }, [dispatch]);

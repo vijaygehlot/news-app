@@ -6,9 +6,7 @@ import App from './App';
 
 const mockStore = configureStore([]);
 const store = mockStore({
-  // Your mock state here
   feed: {
-    // Example mock state
     filters: {
       category: [],
       author: [],

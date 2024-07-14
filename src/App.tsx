@@ -1,9 +1,9 @@
-// App.tsx
+
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import Home from './pages/Home';
 import NotFound from './components/NotFound';
-import ErrorBoundary from './components/ErrorBoundary'; // Import your ErrorBoundary component
+import ErrorBoundary from './components/ErrorBoundary'; 
 
 const App: React.FC = () => {
   return (
